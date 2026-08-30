@@ -12,7 +12,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/features/*": ["src/features/*"],
+      "@/files/*": ["src/features/files/*"],
+      "@/shared/*": ["src/shared/*"],
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"],
   "exclude": ["node_modules"]
