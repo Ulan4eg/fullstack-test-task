@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 import { IAlertItem } from '../types/alert.types';
 import { alertApi } from '../services/alert.api';
-import { useToast } from '@/shared/hooks/useToast';
-import {EToastType} from "@/shared/hooks/use-toast";
+import {EToastType, useToast} from "@/shared/hooks/use-toast";
 
 export function useAlerts() {
   const [ alerts, setAlerts ] = useState<IAlertItem[]>([]);

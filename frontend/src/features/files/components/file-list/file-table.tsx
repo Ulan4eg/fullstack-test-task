@@ -1,7 +1,7 @@
 import { Table } from 'react-bootstrap';
 import { IFileItem } from '../../types/file.types';
 import { FileRow } from './file-row';
-import { EmptyState } from '@/shared/components/EmptyState';
+import { EmptyState } from '@/shared/components/empty-state';
 
 interface FileTableProps {
   files: IFileItem[];

@@ -1,6 +1,6 @@
-import { useState, useCallback } from 'react';
-import { fileApi } from '../services/file.api';
-import { useToast } from '@/shared/hooks/useToast';
+import {useCallback, useState} from 'react';
+import {fileApi} from '../services/file.api';
+import {EToastType, useToast} from '@/shared/hooks/use-toast';
 
 interface UseFileUploadOptions {
   onSuccess?: (file: any) => void;
@@ -30,13 +30,13 @@ export function useFileUpload(options: UseFileUploadOptions = {}) {
       clearInterval(progressInterval);
       setProgress(100);
 
-      showToast('success', 'File uploaded successfully');
+      showToast(EToastType.SUCCESS, 'File uploaded successfully');
       options.onSuccess?.(result);
 
       return result;
     } catch (err) {
       const error = err instanceof Error ? err : new Error('Upload failed');
-      showToast('error', error.message);
+      showToast(EToastType.ERROR, error.message);
       options.onError?.(error);
       throw error;
     } finally {

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Badge, Button, Form, Modal } from 'react-bootstrap';
 import { IFileItem } from '../../types/file.types';
-import { StatusBadge } from '../FileStatus/StatusBadge';
+import { StatusBadge } from '../file-status/status-badge';
 import { formatters } from '../../utils/formatters';
 
 interface FileRowProps {
