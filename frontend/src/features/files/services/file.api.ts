@@ -3,7 +3,7 @@ import { IFileItem, IFileUploadRequest } from '../types/file.types';
 
 export const fileApi = {
   async listFiles(): Promise<IFileItem[]> {
-    return clientApi<IFileItem[]>('/files');
+    return clientApi<IFileItem[]>('/files', { method: 'GET'});
   },
 
   async uploadFile(request: IFileUploadRequest): Promise<IFileItem> {

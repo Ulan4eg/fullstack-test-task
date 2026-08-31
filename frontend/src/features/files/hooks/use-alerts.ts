@@ -36,7 +36,7 @@ export function useAlerts() {
 
   useEffect(() => {
     loadAlerts().then();
-  }, [loadAlerts]);
+  }, []);
 
   return {
     alerts,

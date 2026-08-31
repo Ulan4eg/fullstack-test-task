@@ -66,7 +66,7 @@ export function useFiles() {
 
   useEffect(() => {
     loadFiles().then();
-  }, [loadFiles]);
+  }, []);
 
   return {
     files,
