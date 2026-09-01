@@ -18,3 +18,18 @@
 **Открыть фронт:** ```http://localhost:3000/test``` 
 
 **Открыть бэк:** ```http://localhost:8000/docs```
+
+
+## New ##
+cd backend
+uv sync
+uvicorn app:app --reload
+
+# Celery (в другом терминале)
+cd backend
+celery -A src.infrastructure.task_queue worker --loglevel=info
+
+# Фронтенд
+cd frontend
+npm install
+npm run dev
